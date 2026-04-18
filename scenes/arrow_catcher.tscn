@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6cbvwkbe3xmx"]
 
-[ext_resource type="Texture2D" uid="uid://npdu671q2o4q" path="res://icon.svg" id="1_nt5hh"]
+[ext_resource type="Texture2D" uid="uid://npdu671q2o4q" path="res://assets/icon.svg" id="1_nt5hh"]
 
 [node name="ArrowCatcher" type="Node2D" unique_id=1937745784]
 

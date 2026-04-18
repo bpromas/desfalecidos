@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://hgmye7uo2xj0"]
 
 [ext_resource type="Script" uid="uid://4xcjpuny5ly4" path="res://scripts/arrow.gd" id="1_2ndhl"]
-[ext_resource type="Texture2D" uid="uid://npdu671q2o4q" path="res://icon.svg" id="1_l5ahi"]
+[ext_resource type="Texture2D" uid="uid://edo8nreryni8" path="res://assets/setinha.jpg" id="2_23jat"]
 
 [node name="Arrow" type="Node2D" unique_id=1417892942]
 script = ExtResource("1_2ndhl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1956976363]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_l5ahi")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_23jat")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1473753106]
+offset_left = -39.999992
+offset_top = -38.99999
+offset_bottom = 1.0000114
+scale = Vector2(1.9980547, 1.9894485)
+color = Color(1, 0, 0, 0.3137255)
 
 [node name="Label" type="Label" parent="." unique_id=16106958]
 offset_left = 32.0

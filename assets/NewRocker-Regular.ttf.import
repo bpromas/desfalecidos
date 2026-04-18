@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bhy7gp3uli1ap"
-path="res://.godot/imported/NewRocker-Regular.ttf-e449d06b8ec2004410cada05bd1eccd3.fontdata"
+path="res://.godot/imported/NewRocker-Regular.ttf-694160da7252b26fa9186dd2e6fc76b2.fontdata"
 
 [deps]
 
-source_file="res://NewRocker-Regular.ttf"
-dest_files=["res://.godot/imported/NewRocker-Regular.ttf-e449d06b8ec2004410cada05bd1eccd3.fontdata"]
+source_file="res://assets/NewRocker-Regular.ttf"
+dest_files=["res://.godot/imported/NewRocker-Regular.ttf-694160da7252b26fa9186dd2e6fc76b2.fontdata"]
 
 [params]
 

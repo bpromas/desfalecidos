@@ -6,6 +6,7 @@ var speed = 256
 var time_alive = 0
 
 @onready var label: Label = $Label
+@onready var color_rect: ColorRect = $ColorRect
 
 var direction_vector = {
 	"up": Vector2.UP,
@@ -31,6 +32,8 @@ func hit():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rotation = get_rotation_for_direction(direction)
+	var c = color_rect.color
+	color_rect.color = Color.from_hsv(rotation, c.s, c.v, c.a)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://cufhphhk28env"]
 
-[ext_resource type="FontFile" uid="uid://bhy7gp3uli1ap" path="res://NewRocker-Regular.ttf" id="1_mc0uk"]
+[ext_resource type="FontFile" uid="uid://bhy7gp3uli1ap" path="res://assets/NewRocker-Regular.ttf" id="1_mc0uk"]
 
 [resource]
 default_font = ExtResource("1_mc0uk")
