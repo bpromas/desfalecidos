@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://jl8ysh6juw3"]
+
+[ext_resource type="Theme" uid="uid://cufhphhk28env" path="res://new_rocker.tres" id="1_tx5wa"]
+[ext_resource type="Script" uid="uid://bweohuy7jl1ng" path="res://scenes/menu.gd" id="2_o7i0r"]
+
+[node name="StartScreen" type="Control" unique_id=384893329]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=607662860]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 653.0
+color = Color(1, 0.72, 0.8926667, 1)
+
+[node name="Label" type="Label" parent="." unique_id=623652935]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 101.0
+offset_right = 687.0
+offset_bottom = 181.0
+theme = ExtResource("1_tx5wa")
+theme_override_colors/font_color = Color(0, 0.66, 0.15400001, 1)
+text = "Matatabi"
+
+[node name="Menu" type="Panel" parent="." unique_id=433128971]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 279.0
+offset_right = 715.0
+offset_bottom = 479.0
+theme = ExtResource("1_tx5wa")
+script = ExtResource("2_o7i0r")
+
+[node name="StartGame" type="Button" parent="Menu" unique_id=1382196164]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -4.0
+offset_right = 4.0
+offset_bottom = 8.0
+grow_horizontal = 2
+text = "Iniciar"
+
+[node name="Exit" type="Button" parent="Menu" unique_id=1508844087]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Sair"
+
+[connection signal="pressed" from="Menu/StartGame" to="Menu" method="_on_start_game_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="Menu" method="_on_exit_pressed"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Desfalecidos"
-run/main_scene="uid://db7egoia0wpa0"
+run/main_scene="uid://jl8ysh6juw3"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

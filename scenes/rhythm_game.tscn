@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bpjvlm5n332qf" path="res://scripts/arrow_spawner.gd" id="2_gge2o"]
 [ext_resource type="AudioStream" uid="uid://bi7dfhlo4iptg" path="res://DZK - Mundo Desumano.mp3" id="2_svhef"]
 [ext_resource type="PackedScene" uid="uid://hgmye7uo2xj0" path="res://scenes/arrow.tscn" id="3_gge2o"]
-[ext_resource type="Script" uid="uid://b7jvhgneuiykf" path="res://scenes/debug_songtime.gd" id="6_8b805"]
+[ext_resource type="Script" uid="uid://b7jvhgneuiykf" path="res://scripts/debug_songtime.gd" id="6_8b805"]
 
 [node name="RhythmGame" type="Node2D" unique_id=1833761378]
 script = ExtResource("1_snvp4")
