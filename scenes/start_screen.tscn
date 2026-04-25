@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jl8ysh6juw3"]
 
 [ext_resource type="Theme" uid="uid://cufhphhk28env" path="res://assets/new_rocker.tres" id="1_tx5wa"]
-[ext_resource type="Script" uid="uid://bweohuy7jl1ng" path="res://scenes/menu.gd" id="2_o7i0r"]
+[ext_resource type="Script" uid="uid://bweohuy7jl1ng" path="res://scripts/menu.gd" id="2_o7i0r"]
 
 [node name="StartScreen" type="Control" unique_id=384893329]
 layout_mode = 3
