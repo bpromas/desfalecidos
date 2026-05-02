@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+GlobalVariables="*uid://o0j32errt6sl"
 
 [dialogic]
 
@@ -26,9 +27,11 @@ directories/dch_directory={
 "Miu": "res://Miu.dch"
 }
 directories/dtl_directory={
+"depois_do_teste": "res://depois_do_teste.dtl",
 "intro": "res://intro.dtl"
 }
 layout/style_directory={}
+variables={}
 
 [editor_plugins]
 

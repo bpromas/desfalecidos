@@ -80,3 +80,8 @@ func _input(event):
 		handle_input("left")
 	elif event.is_action_pressed("ui_right"):
 		handle_input("right")
+
+
+func _on_audio_stream_player_finished() -> void:
+	GlobalVariables.previous_score = score
+	get_tree().change_scene_to_file("res://scenes/cutscene_depois_do_teste.tscn")

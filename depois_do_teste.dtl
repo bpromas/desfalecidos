@@ -1,0 +1,14 @@
+join Laranjo left
+Laranjo: vc fez {GlobalVariables.previous_score} pontos
+join Miu rightmost
+Miu: eita
+if {GlobalVariables.previous_score} >= 1000000:
+	Laranjo: tu é bom memo
+	Miu: falei porraaaa
+else:
+	Laranjo: foi mal pra caralho
+	Miu: gulp
+	Laranjo: sucumbaaaaaaaaaaaa
+	Miu: naooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+	leave Miu
+	Laranjo: HA HA HA

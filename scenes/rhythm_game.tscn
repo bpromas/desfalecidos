@@ -54,4 +54,5 @@ offset_top = 101.0
 offset_right = -185.0
 offset_bottom = 124.0
 
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="finished" from="AudioStreamPlayer" to="ArrowSpawner" method="_on_audio_stream_player_finished"]
