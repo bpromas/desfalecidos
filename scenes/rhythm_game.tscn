@@ -10,10 +10,6 @@
 [node name="RhythmGame" type="Node2D" unique_id=1833761378]
 script = ExtResource("1_snvp4")
 
-[node name="ArrowSpawner" type="Node2D" parent="." unique_id=872008516]
-script = ExtResource("2_gge2o")
-arrow_scene = ExtResource("3_gge2o")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1811443360]
 
 [node name="ArrowCatcherUp" parent="." unique_id=1937745784 instance=ExtResource("1_cov3q")]
@@ -30,6 +26,10 @@ rotation = 3.1415927
 [node name="ArrowCatcherLeft" parent="." unique_id=634592452 instance=ExtResource("1_cov3q")]
 position = Vector2(-256, 0)
 rotation = 4.712389
+
+[node name="ArrowSpawner" type="Node2D" parent="." unique_id=872008516]
+script = ExtResource("2_gge2o")
+arrow_scene = ExtResource("3_gge2o")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1448761216]
 stream = ExtResource("2_svhef")
@@ -53,3 +53,5 @@ offset_left = -225.0
 offset_top = 101.0
 offset_right = -185.0
 offset_bottom = 124.0
+
+[connection signal="finished" from="AudioStreamPlayer" to="ArrowSpawner" method="_on_audio_stream_player_finished"]

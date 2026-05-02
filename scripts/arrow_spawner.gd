@@ -10,28 +10,17 @@ var bpm := 90.0
 var beat_in_sec := 0.67
 var first_note_time := 1.7
 
+var song_is_playing := true
+
 var notes := [
 	"up","left","up","right",
-	"down","down","up","left",
-	"up","right","down","down",
-	"up","left","up","right",
-	"down","down","up","left",
-	"up","right","down","down",
-	"up","left","up","right",
-	"down","down","up","left",
-	"up","right","down","down",
-	"up","left","up","right",
-	"down","down","up","left",
-	"up","right","down","down",
-	"up","left","up","right",
-	"down","down","up","left",
-	"up","right","down","down",
 ]
 
 var next_note_index := 0
 
 func spawn_arrow(note):
 	var arrow = arrow_scene.instantiate()
+	arrow.missed.connect(_on_arrow_missed)
 	arrow.direction = note
 	arrow.target_time = first_note_time + beat_in_sec * next_note_index
 
@@ -45,8 +34,7 @@ func _ready():
 func _process(delta):
 	var current_time = game.get_song_time()
 
-	while next_note_index < notes.size():
-		#var note = notes[next_note_index]
+	while song_is_playing:
 		var note = ["up", "down", "left", "right"].pick_random()
 		var note_time = first_note_time + beat_in_sec * next_note_index
 
@@ -55,3 +43,11 @@ func _process(delta):
 			next_note_index += 1
 		else:
 			break
+			
+func _on_arrow_missed() -> void:
+	print("missed!")
+	game.break_combo()
+
+func _on_audio_stream_player_finished() -> void:
+	song_is_playing = false
+	pass # Replace with function body.

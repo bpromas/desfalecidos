@@ -25,6 +25,24 @@
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
+},
+"Miu Bravo": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Miu Feliz": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
 }
 },
 &"scale": 1.0

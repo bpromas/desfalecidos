@@ -5,6 +5,8 @@ var target_time
 var speed = 256
 var time_alive = 0
 
+signal missed
+
 @onready var label: Label = $Label
 @onready var color_rect: ColorRect = $ColorRect
 
@@ -41,5 +43,6 @@ func _process(delta):
 	
 	time_alive += delta
 	if time_alive >= 1.5:
+		missed.emit()
 		queue_free()
 	label.text = str(target_time)

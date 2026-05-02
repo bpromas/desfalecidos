@@ -16,7 +16,7 @@ var arrows_by_direction = {
 
 func get_song_time():
 	return audio_stream_player.get_playback_position()
-
+	
 func handle_input(direction):
 	var arrows = arrows_by_direction[direction]
 	if arrows.is_empty():
@@ -60,6 +60,10 @@ func judge(arrow, diff):
 	score += points * combo
 	combo_label.text = "x%s" % combo
 	score_label.text = "%s" % score
+	
+func break_combo():
+	combo = 0
+	combo_label.text = "x%s" % combo
 
 func _ready():
 	pass # Replace with function body.
