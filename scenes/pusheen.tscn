@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://detkdu2g08c1i"]
+
+[ext_resource type="Script" uid="uid://wseo2te7byvk" path="res://scripts/pusheen.gd" id="1_p2ayf"]
+[ext_resource type="Texture2D" uid="uid://knesq4umwla5" path="res://assets/pusheen-guitar.png" id="2_d31ha"]
+[ext_resource type="Texture2D" uid="uid://d68vs6em73ar" path="res://assets/pusheen-sad.png" id="3_11yig"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbwb0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d31ha")
+}],
+"loop": false,
+"name": &"playing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_11yig")
+}],
+"loop": false,
+"name": &"sad",
+"speed": 5.0
+}]
+
+[node name="Pusheen" type="Node2D" unique_id=1411417020]
+script = ExtResource("1_p2ayf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1076468340]
+sprite_frames = SubResource("SpriteFrames_gbwb0")
+animation = &"playing"

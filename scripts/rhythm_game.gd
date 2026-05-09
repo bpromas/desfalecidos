@@ -7,6 +7,8 @@ extends Node2D
 var combo := 0
 var score := 0
 
+signal broke_combo
+
 var arrows_by_direction = {
 	"up": [],
 	"down": [],
@@ -54,7 +56,7 @@ func judge(arrow, diff):
 		points += 25
 		arrow.hit()
 	else:
-		combo = 0
+		break_combo()
 		print("miss")
 	
 	score += points * combo
@@ -64,6 +66,7 @@ func judge(arrow, diff):
 func break_combo():
 	combo = 0
 	combo_label.text = "x%s" % combo
+	broke_combo.emit()
 
 func _ready():
 	pass # Replace with function body.
@@ -83,5 +86,10 @@ func _input(event):
 
 
 func _on_audio_stream_player_finished() -> void:
+	GlobalVariables.previous_score = score
+	get_tree().change_scene_to_file("res://scenes/cutscene_depois_do_teste.tscn")
+
+
+func _on_debug_finalizar_pressed() -> void:
 	GlobalVariables.previous_score = score
 	get_tree().change_scene_to_file("res://scenes/cutscene_depois_do_teste.tscn")

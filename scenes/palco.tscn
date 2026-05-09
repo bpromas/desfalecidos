@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bqxunglu645w3"]
+
+[ext_resource type="PackedScene" uid="uid://db7egoia0wpa0" path="res://scenes/rhythm_game.tscn" id="1_57ea8"]
+[ext_resource type="Texture2D" uid="uid://iu4ru8t2j63t" path="res://assets/estrutura-de-palco-grande-boxtruss-e-tablado-com-carpete-show.png" id="1_rxhs0"]
+[ext_resource type="PackedScene" uid="uid://detkdu2g08c1i" path="res://scenes/pusheen.tscn" id="2_q3d1d"]
+[ext_resource type="Script" uid="uid://cjluwxto4ehdf" path="res://scripts/path_follow_2d.gd" id="3_t6uep"]
+
+[sub_resource type="Curve2D" id="Curve2D_57ea8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 3
+
+[node name="Palco" type="Node2D" unique_id=1732514622]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=354711836]
+scale = Vector2(2, 2)
+texture = ExtResource("1_rxhs0")
+
+[node name="Pusheen" parent="." unique_id=1411417020 instance=ExtResource("2_q3d1d")]
+position = Vector2(-237, 91)
+scale = Vector2(0.3, 0.3)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=237991703]
+position = Vector2(-396, 81)
+curve = SubResource("Curve2D_57ea8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1175850094]
+rotates = false
+script = ExtResource("3_t6uep")
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D" unique_id=254679687]
+position = Vector2(3, 3)
+
+[node name="RhythmGame" parent="Path2D/PathFollow2D/Camera2D" unique_id=1833761378 instance=ExtResource("1_57ea8")]

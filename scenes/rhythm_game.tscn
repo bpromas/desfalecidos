@@ -54,5 +54,14 @@ offset_top = 101.0
 offset_right = -185.0
 offset_bottom = 124.0
 
+[node name="DEBUG_Finalizar" type="Button" parent="." unique_id=896633886]
+offset_left = 227.0
+offset_top = 266.0
+offset_right = 235.0
+offset_bottom = 274.0
+text = "Finalizar"
+
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="finished" from="AudioStreamPlayer" to="ArrowSpawner" method="_on_audio_stream_player_finished"]
+[connection signal="pressed" from="DEBUG_Finalizar" to="." method="_on_debug_finalizar_pressed"]
+[connection signal="pressed" from="DEBUG_Finalizar" to="DEBUG_Finalizar" method="_on_pressed"]
