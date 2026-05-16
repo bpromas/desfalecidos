@@ -2,9 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://6cbvwkbe3xmx" path="res://scenes/arrow_catcher.tscn" id="1_cov3q"]
 [ext_resource type="Script" uid="uid://c50n6wreswxom" path="res://scripts/rhythm_game.gd" id="1_snvp4"]
+[ext_resource type="Texture2D" uid="uid://dj17jdhmmuwq1" path="res://assets/setinhas/setinha cima.png" id="2_2w8hn"]
 [ext_resource type="Script" uid="uid://bpjvlm5n332qf" path="res://scripts/arrow_spawner.gd" id="2_gge2o"]
 [ext_resource type="AudioStream" uid="uid://bi7dfhlo4iptg" path="res://assets/DZK - Mundo Desumano.mp3" id="2_svhef"]
 [ext_resource type="PackedScene" uid="uid://hgmye7uo2xj0" path="res://scenes/arrow.tscn" id="3_gge2o"]
+[ext_resource type="Texture2D" uid="uid://cw41ex15ujfmc" path="res://assets/setinhas/setinha direita.png" id="3_yuydm"]
+[ext_resource type="Texture2D" uid="uid://bnm5tsbya067d" path="res://assets/setinhas/setinha baixo.png" id="4_egq4h"]
+[ext_resource type="Texture2D" uid="uid://cq17jgmo2iny0" path="res://assets/setinhas/setinha esquerda.png" id="5_ufa1g"]
 [ext_resource type="Script" uid="uid://b7jvhgneuiykf" path="res://scripts/debug_songtime.gd" id="6_8b805"]
 
 [node name="RhythmGame" type="Node2D" unique_id=1833761378]
@@ -12,18 +16,50 @@ script = ExtResource("1_snvp4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1811443360]
 
-[node name="ArrowCatcherUp" parent="." unique_id=1937745784 instance=ExtResource("1_cov3q")]
+[node name="ArrowCatcherUp" type="Node2D" parent="." unique_id=2146540538]
 position = Vector2(0, -256)
 
-[node name="ArrowCatcherRight" parent="." unique_id=656201805 instance=ExtResource("1_cov3q")]
+[node name="Sprite2D" type="Sprite2D" parent="ArrowCatcherUp" unique_id=1437853565]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_2w8hn")
+
+[node name="ArrowCatcherRight" type="Node2D" parent="." unique_id=1087239019]
+position = Vector2(256, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ArrowCatcherRight" unique_id=1802819122]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_yuydm")
+
+[node name="ArrowCatcherDown" type="Node2D" parent="." unique_id=1401928175]
+
+[node name="Sprite2D" type="Sprite2D" parent="ArrowCatcherDown" unique_id=1537986320]
+position = Vector2(0, 256)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_egq4h")
+
+[node name="ArrowCatcherLeft" type="Node2D" parent="." unique_id=262765818]
+
+[node name="Sprite2D" type="Sprite2D" parent="ArrowCatcherLeft" unique_id=1072975018]
+position = Vector2(-256, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_ufa1g")
+
+[node name="_ArrowCatcherUp" parent="." unique_id=1937745784 instance=ExtResource("1_cov3q")]
+visible = false
+position = Vector2(0, -256)
+
+[node name="_ArrowCatcherRight" parent="." unique_id=656201805 instance=ExtResource("1_cov3q")]
+visible = false
 position = Vector2(256, 0)
 rotation = 1.5707964
 
-[node name="ArrowCatcherDown" parent="." unique_id=641575136 instance=ExtResource("1_cov3q")]
+[node name="_ArrowCatcherDown" parent="." unique_id=641575136 instance=ExtResource("1_cov3q")]
+visible = false
 position = Vector2(0, 256)
 rotation = 3.1415927
 
-[node name="ArrowCatcherLeft" parent="." unique_id=634592452 instance=ExtResource("1_cov3q")]
+[node name="_ArrowCatcherLeft" parent="." unique_id=634592452 instance=ExtResource("1_cov3q")]
+visible = false
 position = Vector2(-256, 0)
 rotation = 4.712389
 
