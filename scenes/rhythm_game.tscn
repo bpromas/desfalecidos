@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://db7egoia0wpa0"]
 
-[ext_resource type="PackedScene" uid="uid://6cbvwkbe3xmx" path="res://scenes/arrow_catcher.tscn" id="1_cov3q"]
 [ext_resource type="Script" uid="uid://c50n6wreswxom" path="res://scripts/rhythm_game.gd" id="1_snvp4"]
 [ext_resource type="Texture2D" uid="uid://dj17jdhmmuwq1" path="res://assets/setinhas/setinha cima.png" id="2_2w8hn"]
 [ext_resource type="Script" uid="uid://bpjvlm5n332qf" path="res://scripts/arrow_spawner.gd" id="2_gge2o"]
-[ext_resource type="AudioStream" uid="uid://bi7dfhlo4iptg" path="res://assets/DZK - Mundo Desumano.mp3" id="2_svhef"]
 [ext_resource type="PackedScene" uid="uid://hgmye7uo2xj0" path="res://scenes/arrow.tscn" id="3_gge2o"]
 [ext_resource type="Texture2D" uid="uid://cw41ex15ujfmc" path="res://assets/setinhas/setinha direita.png" id="3_yuydm"]
 [ext_resource type="Texture2D" uid="uid://bnm5tsbya067d" path="res://assets/setinhas/setinha baixo.png" id="4_egq4h"]
 [ext_resource type="Texture2D" uid="uid://cq17jgmo2iny0" path="res://assets/setinhas/setinha esquerda.png" id="5_ufa1g"]
 [ext_resource type="Script" uid="uid://b7jvhgneuiykf" path="res://scripts/debug_songtime.gd" id="6_8b805"]
+[ext_resource type="AudioStream" uid="uid://d4acxxs2d7feg" path="res://assets/Skate-Punk-Instrumental.mp3" id="9_egq4h"]
 
 [node name="RhythmGame" type="Node2D" unique_id=1833761378]
 script = ExtResource("1_snvp4")
@@ -44,31 +43,12 @@ position = Vector2(-256, 0)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("5_ufa1g")
 
-[node name="_ArrowCatcherUp" parent="." unique_id=1937745784 instance=ExtResource("1_cov3q")]
-visible = false
-position = Vector2(0, -256)
-
-[node name="_ArrowCatcherRight" parent="." unique_id=656201805 instance=ExtResource("1_cov3q")]
-visible = false
-position = Vector2(256, 0)
-rotation = 1.5707964
-
-[node name="_ArrowCatcherDown" parent="." unique_id=641575136 instance=ExtResource("1_cov3q")]
-visible = false
-position = Vector2(0, 256)
-rotation = 3.1415927
-
-[node name="_ArrowCatcherLeft" parent="." unique_id=634592452 instance=ExtResource("1_cov3q")]
-visible = false
-position = Vector2(-256, 0)
-rotation = 4.712389
-
 [node name="ArrowSpawner" type="Node2D" parent="." unique_id=872008516]
 script = ExtResource("2_gge2o")
 arrow_scene = ExtResource("3_gge2o")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1448761216]
-stream = ExtResource("2_svhef")
+stream = ExtResource("9_egq4h")
 autoplay = true
 
 [node name="Label" type="Label" parent="." unique_id=2100832216]

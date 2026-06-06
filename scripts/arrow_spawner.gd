@@ -6,9 +6,9 @@ extends Node2D
 
 var travel_time := 1
 
-var bpm := 90.0
-var beat_in_sec := 0.67
-var first_note_time := 1.7
+var bpm := 106.0
+var beat_in_sec := 60/bpm
+var first_note_time := 2.5
 
 var song_is_playing := true
 
