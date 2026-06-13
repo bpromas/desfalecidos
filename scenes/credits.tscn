@@ -58,7 +58,7 @@ grow_vertical = 2
 text = "Bruna Souza
 Bruno Romaszkiewicz
 Lais
-Samuel"
+Sammy"
 
 [node name="TYFP" type="Label" parent="." unique_id=1151140293]
 layout_mode = 1

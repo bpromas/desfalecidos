@@ -23,8 +23,12 @@ GlobalVariables="*uid://o0j32errt6sl"
 [dialogic]
 
 directories/dch_directory={
+"Apresentador": "res://Apresentador.dch",
 "Laranjo": "res://Laranjo.dch",
-"Miu": "res://Miu.dch"
+"Luna": "res://Luna.dch",
+"Miu": "res://Miu.dch",
+"Plateia": "res://Plateia.dch",
+"Reporter": "res://Reporter.dch"
 }
 directories/dtl_directory={
 "depois_do_teste": "res://depois_do_teste.dtl",

@@ -1,6 +1,16 @@
-join Laranjo left
-join Miu rightmost
-Laranjo: oi miu
-Miu (Miu): oi laranjor
-Laranjo: toca ai vamo ve se tu e bom memo
-Miu: so bom ce vai ve
+Apresentador: Com vocês, MATATABI!!!
+Plateia: Eu amo vocês!!
+Plateia: XXXXXX, casa comigo!!
+[wait time="1.5"]
+Reporter: As autoridades seguem buscando por qualquer pista sobre o paradeiro de XXXXXX, baixista da controversa e popular banda Matatabi.
+Reporter: Hoje mais cedo a banda fez um anuncio em suas redes sociais que deixou muitos fãs desalentados, acompanhe\:
+Luna: Como muitos de vocês já sabem, XXXXXX está desaparecido e ninguém da banda sabe onde ele está
+Luna: Decidimos fazer uma pausa até que as autoridades descubram o que houve com o nosso baixista.
+[wait time="1.5"]
+Luna: PRONTO! Anúncio postado.
+Matatabi procura novo baixista! \
+Compareça ao teste amanhã, na Rua Sardinha, nº 2, à partir das 10h.
+join Miu center
+Miu: Eu não acredito!! Depois de um ano a banda finalmente vai voltar!
+update Miu [animation="Heartbeat" wait="true"]
+Miu: Eu vou tentar...
