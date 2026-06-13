@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bpyedmupuma8i"]
+
+[ext_resource type="Theme" uid="uid://cufhphhk28env" path="res://assets/new_rocker.tres" id="1_2ckv8"]
+[ext_resource type="Script" uid="uid://ckjh5krxtjj3g" path="res://scripts/sair.gd" id="2_0ctdu"]
+
+[sub_resource type="Theme" id="Theme_2fbfq"]
+default_font_size = 32
+
+[node name="Credits" type="Control" unique_id=1643536628]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="." unique_id=1327606545]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -467.0
+offset_right = 357.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_2fbfq")
+
+[node name="Cargos" type="Label" parent="Control" unique_id=975137388]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -50.5
+offset_right = 223.0
+offset_bottom = 50.5
+grow_vertical = 2
+text = "Roteiro e Direção Criativa
+Programação e Game Design
+Arte e Design
+Arte e Design"
+horizontal_alignment = 2
+
+[node name="Nomes" type="Label" parent="Control" unique_id=1865379305]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -50.5
+offset_bottom = 50.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Bruna Souza
+Bruno Romaszkiewicz
+Lais
+Samuel"
+
+[node name="TYFP" type="Label" parent="." unique_id=1151140293]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.0
+offset_top = 89.0
+offset_right = 267.0
+offset_bottom = 169.0
+grow_horizontal = 2
+theme = ExtResource("1_2ckv8")
+text = "Obrigado por jogar!"
+
+[node name="Sair" type="Button" parent="." unique_id=784748544]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.5
+offset_top = -128.0
+offset_right = 59.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_2ckv8")
+text = "Sair"
+script = ExtResource("2_0ctdu")
+
+[connection signal="pressed" from="Sair" to="Sair" method="_on_pressed"]

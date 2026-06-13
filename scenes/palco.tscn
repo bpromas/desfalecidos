@@ -21,15 +21,15 @@ texture = ExtResource("1_rxhs0")
 position = Vector2(-237, 91)
 scale = Vector2(0.3, 0.3)
 
-[node name="Path2D" type="Path2D" parent="." unique_id=237991703]
+[node name="Path 1" type="Path2D" parent="." unique_id=237991703]
 position = Vector2(-396, 81)
 curve = SubResource("Curve2D_57ea8")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1175850094]
+[node name="PathFollow2D" type="PathFollow2D" parent="Path 1" unique_id=1175850094]
 rotates = false
 script = ExtResource("3_t6uep")
 
-[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D" unique_id=254679687]
+[node name="Camera2D" type="Camera2D" parent="Path 1/PathFollow2D" unique_id=254679687]
 position = Vector2(3, 3)
 
-[node name="RhythmGame" parent="Path2D/PathFollow2D/Camera2D" unique_id=1833761378 instance=ExtResource("1_57ea8")]
+[node name="RhythmGame" parent="Path 1/PathFollow2D/Camera2D" unique_id=1833761378 instance=ExtResource("1_57ea8")]

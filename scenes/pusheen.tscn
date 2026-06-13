@@ -23,9 +23,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_d31ha"]
+resource_name = "skew"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_11yig"]
+_data = {
+&"skew": SubResource("Animation_d31ha")
+}
+
 [node name="Pusheen" type="Node2D" unique_id=1411417020]
+skew = 0.08726646
 script = ExtResource("1_p2ayf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1076468340]
 sprite_frames = SubResource("SpriteFrames_gbwb0")
 animation = &"playing"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=370086219]
+libraries/ = SubResource("AnimationLibrary_11yig")
