@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bng77ktrsuqac"]
+
+[ext_resource type="Script" uid="uid://cm5otog1tcyvu" path="res://SCRIPTS/miu_chibi.gd" id="1_05dmb"]
+[ext_resource type="Texture2D" uid="uid://7gimdgn4otwx" path="res://assets/miuchibi.png" id="1_o8bus"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05dmb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o8bus")
+}],
+"loop": true,
+"name": &"playing",
+"speed": 5.0
+}]
+
+[node name="MiuChibi" type="Node2D" unique_id=1139898852]
+script = ExtResource("1_05dmb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1407047589]
+sprite_frames = SubResource("SpriteFrames_05dmb")
+animation = &"playing"

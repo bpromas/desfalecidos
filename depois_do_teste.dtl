@@ -1,14 +1,9 @@
-join Laranjo left
-Laranjo: vc fez {GlobalVariables.previous_score} pontos
-join Miu rightmost
-Miu: eita
+join Laranjo right [mirrored="true"]
+join Miu left [mirrored="true"]
 if {GlobalVariables.previous_score} >= 5000:
-	Laranjo: tu é bom memo
-	Miu: falei porraaaa
+	Laranjo: Interessante. Aguarde a nossa ligação.
 else:
-	Laranjo: foi mal pra caralho
-	Miu: gulp
-	Laranjo: sucumbaaaaaaaaaaaa
-	Miu: naooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-	leave Miu
-	Laranjo: HA HA HA
+	Laranjo: Saia daqui.
+Miu: Tá bem...
+leave Miu
+Laranjo: PRÓXIMO!
