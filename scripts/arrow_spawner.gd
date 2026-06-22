@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var score_label: Label = $"../ScoreLabel"
+@onready var score_label: RichTextLabel = $"../ScoreLabel"
 @export var arrow_scene : PackedScene
 @onready var game = $".."
 
@@ -34,7 +34,8 @@ func _ready():
 func _process(delta):
 	var current_time = game.get_song_time()
 
-	while song_is_playing:
+	#while song_is_playing:
+	while game.get_song_time() <= 129.0:
 		var note = ["up", "down", "left", "right"].pick_random()
 		var note_time = first_note_time + beat_in_sec * next_note_index
 

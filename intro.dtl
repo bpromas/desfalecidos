@@ -1,33 +1,10 @@
-Apresentador: Com vocês, MATATABI!!!
-audio "res://assets/audio/heavy-metal-intro.mp3" [volume="-10.0" bus=""]
-Plateia: Eu amo vocês!!
-Plateia: Laranjo, casa comigo!!
-[wait time="1.5"]
-audio "res://assets/audio/intro-news-background.mp3" [volume="-10.0"]
-Reporter: As autoridades seguem buscando por qualquer pista sobre o paradeiro do baixista da controversa e popular banda Matatabi.
-Reporter: Hoje mais cedo a banda fez um anuncio em suas redes sociais que deixou muitos fãs desalentados, acompanhe\:
-Luna: Como muitos de vocês já sabem, nosso baixista está desaparecido e ninguém da banda sabe onde ele está
-Luna: Decidimos fazer uma pausa até que as autoridades descubram o que houve com o nosso baixista.
-[wait time="1.5"]
-[1 ANO DEPOIS]
-Luna: PRONTO! Anúncio postado.
+audio "res://assets/audio/new-notification-010.mp3"
+[ANÚNCIO]\
 Matatabi procura novo baixista! \
 Compareça ao teste amanhã, na Rua Sardinha, nº 2, à partir das 10h.
-join Miu center [mirrored="true"]
-audio "res://assets/audio/new-notification-010.mp3"
-update Miu [animation="Bounce"]
 Miu: Eu não acredito!! Depois de um ano a banda finalmente vai voltar!
-update Miu [animation="Heartbeat" wait="true"]
 audio "res://assets/audio/heartbeat-single.mp3"
-Miu: Eu vou tentar...
-leave Miu
-[wait time="1.5"]
-join Laranjo right [mirrored="true"]
-Laranjo: Seu nome?
-join Miu left [mirrored="true"]
-Miu: (Ai meu deus é o Laranjo)
-Miu: Meu nome é Miu. Sou muito seu fã
-Laranjo: Tá bem, Miu. Mostra o que sabe fazer.
-audio "res://assets/audio/heartbeat-single.mp3"
-update Miu [animation="Heartbeat"]
-Miu: (Lá vai...)
+Miu: Eu vou tentar…
+[wait time="1.0"]
+[background arg="res://assets/Miu na fila no beco.png" fade="0.0"]
+Miu: É agora... Minha chance de entrar pra Matatabi...

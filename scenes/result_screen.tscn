@@ -1,0 +1,279 @@
+[gd_scene format=3 uid="uid://cgpsqmyjurfh7"]
+
+[ext_resource type="Script" uid="uid://byjse2shr6jjw" path="res://scripts/result_screen.gd" id="1_p64tj"]
+[ext_resource type="Theme" uid="uid://cufhphhk28env" path="res://assets/new_rocker.tres" id="1_y7kih"]
+
+[node name="ResultScreen" type="Control" unique_id=1598797138]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p64tj")
+
+[node name="PerfectControl" type="Control" parent="." unique_id=1284930484]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 211.0
+offset_top = 16.0
+offset_right = 211.0
+offset_bottom = 176.0
+
+[node name="PerfectLabel" type="RichTextLabel" parent="PerfectControl" unique_id=640259397]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[rainbow][shake][wave]PERFEITO"
+fit_content = true
+autowrap_mode = 0
+
+[node name="PerfectCount" type="RichTextLabel" parent="PerfectControl" unique_id=1870989605]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -80.0
+offset_right = 161.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[rainbow][shake][wave]96"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GreatControl" type="Control" parent="." unique_id=1032119200]
+anchors_preset = 0
+offset_left = 461.0
+offset_top = 135.0
+offset_right = 461.0
+offset_bottom = 295.0
+
+[node name="GreatLabel" type="RichTextLabel" parent="GreatControl" unique_id=593780007]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[color=lightgreen][shake][wave]ÓTIMO"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GreatCount" type="RichTextLabel" parent="GreatControl" unique_id=1648649292]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -80.0
+offset_right = 161.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[color=lightgreen][shake][wave]122"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GoodControl" type="Control" parent="." unique_id=632433593]
+anchors_preset = 0
+offset_left = 209.0
+offset_top = 209.0
+offset_right = 209.0
+offset_bottom = 369.0
+
+[node name="GoodLabel" type="RichTextLabel" parent="GoodControl" unique_id=957679346]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[color=dodgerblue][shake]BOM"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GoodCount" type="RichTextLabel" parent="GoodControl" unique_id=119851047]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -80.0
+offset_right = 161.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[color=dodgerblue][shake]32"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MissControl" type="Control" parent="." unique_id=11367470]
+anchors_preset = 0
+offset_left = 466.0
+offset_top = 298.0
+offset_right = 466.0
+offset_bottom = 458.0
+
+[node name="MissLabel" type="RichTextLabel" parent="MissControl" unique_id=534677638]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[color=gray]errou..."
+fit_content = true
+autowrap_mode = 0
+
+[node name="MissCount" type="RichTextLabel" parent="MissControl" unique_id=786336311]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -80.0
+offset_right = 161.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "[color=gray]2"
+fit_content = true
+autowrap_mode = 0
+
+[node name="AccuracyControl" type="Control" parent="." unique_id=2061483801]
+anchors_preset = 0
+offset_left = 210.0
+offset_top = 456.0
+offset_right = 210.0
+offset_bottom = 616.0
+
+[node name="AccuracyLabel" type="RichTextLabel" parent="AccuracyControl" unique_id=928477405]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "Precisão"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Accuracy" type="RichTextLabel" parent="AccuracyControl" unique_id=1733021660]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -80.0
+offset_right = 161.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "86.75%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ComboControl" type="Control" parent="." unique_id=325883503]
+anchors_preset = 0
+offset_left = 863.0
+offset_top = 37.0
+offset_right = 863.0
+offset_bottom = 197.0
+
+[node name="ComboLabel" type="RichTextLabel" parent="ComboControl" unique_id=1860809739]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "Combo"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Combo" type="RichTextLabel" parent="ComboControl" unique_id=43139980]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -161.5
+offset_top = -80.0
+offset_right = 161.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_y7kih")
+bbcode_enabled = true
+text = "x202"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Score" type="RichTextLabel" parent="." unique_id=2086539616]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 299.0
+offset_right = 1092.0
+offset_bottom = 458.0
+theme = ExtResource("1_y7kih")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[shake level=100]500000"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ButtonContinuar" type="Button" parent="." unique_id=1094254079]
+layout_mode = 0
+offset_left = 938.0
+offset_top = 547.0
+offset_right = 1096.5
+offset_bottom = 599.53
+theme = ExtResource("1_y7kih")
+theme_override_font_sizes/font_size = 32
+text = "Continuar"
+
+[connection signal="pressed" from="ButtonContinuar" to="." method="_on_button_continuar_pressed"]

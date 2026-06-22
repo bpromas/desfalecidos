@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqxunglu645w3"]
 
 [ext_resource type="PackedScene" uid="uid://db7egoia0wpa0" path="res://scenes/rhythm_game.tscn" id="1_57ea8"]
-[ext_resource type="Texture2D" uid="uid://ctyusvo2173e2" path="res://assets/music-studio.png" id="1_t6uep"]
+[ext_resource type="Texture2D" uid="uid://bo4kd8l3asoa8" path="res://assets/athithan-vignakaran-ySNj3M5pnOQ-unsplash.jpg" id="1_t6uep"]
 [ext_resource type="PackedScene" uid="uid://detkdu2g08c1i" path="res://scenes/pusheen.tscn" id="2_q3d1d"]
 [ext_resource type="Script" uid="uid://cjluwxto4ehdf" path="res://scripts/path_follow_2d.gd" id="3_t6uep"]
 [ext_resource type="PackedScene" uid="uid://bng77ktrsuqac" path="res://scenes/miu_chibi.tscn" id="5_t6uep"]
@@ -16,7 +16,7 @@ point_count = 3
 
 [node name="Background" type="Sprite2D" parent="." unique_id=354711836]
 position = Vector2(-360, 71)
-scale = Vector2(1.0121512, 1.0121512)
+scale = Vector2(0.7487266, 0.7487266)
 texture = ExtResource("1_t6uep")
 
 [node name="Pusheen" parent="." unique_id=1411417020 instance=ExtResource("2_q3d1d")]
@@ -25,11 +25,11 @@ position = Vector2(-237, 91)
 scale = Vector2(0.3, 0.3)
 
 [node name="MiuChibi" parent="." unique_id=1139898852 instance=ExtResource("5_t6uep")]
-position = Vector2(-439.99997, 174)
+position = Vector2(-308, 231)
 scale = Vector2(0.25363514, 0.25363514)
 
 [node name="Path 1" type="Path2D" parent="." unique_id=237991703]
-position = Vector2(-484, 147)
+position = Vector2(-471, 214)
 curve = SubResource("Curve2D_57ea8")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path 1" unique_id=1175850094]
