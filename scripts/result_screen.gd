@@ -7,6 +7,7 @@ extends Control
 @onready var accuracy = $AccuracyControl/Accuracy
 @onready var score = $Score
 @onready var combo = $ComboControl/Combo
+const ORCHESTRA_HIT = preload("uid://cx7n17rl5rh38")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +28,32 @@ func _ready():
 	else:
 		score.text = "[shake level=%s]%s" % [shake_factor, global_score]
 
+	for child in get_children():
+		if not child is Button:
+			child.visible = false
+
+	reveal_children()
+
+func reveal_children():
+	var player := AudioStreamPlayer.new()
+	player.stream = ORCHESTRA_HIT
+	add_child(player)
+
+	var pitch := 1.0
+	await get_tree().create_timer(0.3).timeout
+	for child in get_children():
+		if child == player:
+			continue
+
+		if not child is Button:
+			child.visible = true
+
+			player.pitch_scale = pitch
+			player.play()
+
+			pitch += 0.1
+
+			await get_tree().create_timer(0.3).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
