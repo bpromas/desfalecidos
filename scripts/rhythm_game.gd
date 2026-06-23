@@ -74,8 +74,6 @@ func judge(arrow, diff):
 		points += 25
 		arrow.hit()
 	else:
-		miss_count+=1
-		judgement_label.text = "[color=gray]errou..."
 		break_combo()
 		print("miss")
 	
@@ -92,7 +90,9 @@ func judge(arrow, diff):
 		
 	
 func break_combo():
+	miss_count+=1
 	combo = 0
+	judgement_label.text = "[color=gray]errou..."
 	combo_label.text = "x%s" % combo
 	broke_combo.emit()
 
