@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://db7egoia0wpa0" path="res://scenes/rhythm_game.tscn" id="1_57ea8"]
 [ext_resource type="Texture2D" uid="uid://bo4kd8l3asoa8" path="res://assets/athithan-vignakaran-ySNj3M5pnOQ-unsplash.jpg" id="1_t6uep"]
 [ext_resource type="PackedScene" uid="uid://detkdu2g08c1i" path="res://scenes/pusheen.tscn" id="2_q3d1d"]
+[ext_resource type="PackedScene" uid="uid://d0iiq66fm2lsj" path="res://scenes/loki_chibi.tscn" id="3_63mkn"]
 [ext_resource type="Script" uid="uid://cjluwxto4ehdf" path="res://scripts/path_follow_2d.gd" id="3_t6uep"]
+[ext_resource type="Script" uid="uid://cl4641344fw6u" path="res://scripts/loki_chibi.gd" id="4_06ty6"]
 [ext_resource type="PackedScene" uid="uid://bng77ktrsuqac" path="res://scenes/miu_chibi.tscn" id="5_t6uep"]
 
 [sub_resource type="Curve2D" id="Curve2D_57ea8"]
@@ -24,9 +26,14 @@ visible = false
 position = Vector2(-237, 91)
 scale = Vector2(0.3, 0.3)
 
+[node name="LokiChibi" parent="." unique_id=1100580221 instance=ExtResource("3_63mkn")]
+position = Vector2(-148.99998, 128.99998)
+scale = Vector2(0.2536801, 0.2536801)
+script = ExtResource("4_06ty6")
+
 [node name="MiuChibi" parent="." unique_id=1139898852 instance=ExtResource("5_t6uep")]
 position = Vector2(-308, 231)
-scale = Vector2(0.25363514, 0.25363514)
+scale = Vector2(0.28, 0.28)
 
 [node name="Path 1" type="Path2D" parent="." unique_id=237991703]
 position = Vector2(-471, 214)

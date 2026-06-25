@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cw41ex15ujfmc" path="res://assets/setinhas/setinha direita.png" id="3_yuydm"]
 [ext_resource type="Texture2D" uid="uid://bnm5tsbya067d" path="res://assets/setinhas/setinha baixo.png" id="4_egq4h"]
 [ext_resource type="Texture2D" uid="uid://cq17jgmo2iny0" path="res://assets/setinhas/setinha esquerda.png" id="5_ufa1g"]
-[ext_resource type="Script" uid="uid://b7jvhgneuiykf" path="res://scripts/debug_songtime.gd" id="6_8b805"]
 [ext_resource type="AudioStream" uid="uid://d4acxxs2d7feg" path="res://assets/audio/Skate-Punk-Instrumental.mp3" id="9_egq4h"]
 [ext_resource type="Theme" uid="uid://cufhphhk28env" path="res://assets/new_rocker.tres" id="10_egq4h"]
 
@@ -52,21 +51,13 @@ arrow_scene = ExtResource("3_gge2o")
 stream = ExtResource("9_egq4h")
 autoplay = true
 
-[node name="Label" type="Label" parent="." unique_id=2100832216]
-visible = false
-offset_left = 453.0
-offset_top = 301.0
-offset_right = 577.0
-offset_bottom = 324.0
-text = "30.26556489486"
-script = ExtResource("6_8b805")
-
 [node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=1335863887]
 offset_left = 134.0
 offset_top = 183.0
 offset_right = 357.0
 offset_bottom = 263.0
 theme = ExtResource("10_egq4h")
+theme_override_constants/outline_size = 16
 bbcode_enabled = true
 text = "500.000"
 fit_content = true
@@ -78,6 +69,7 @@ offset_top = 127.0
 offset_right = 261.0
 offset_bottom = 207.0
 theme = ExtResource("10_egq4h")
+theme_override_constants/outline_size = 12
 theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "x150"
@@ -91,6 +83,7 @@ offset_top = 144.0
 offset_right = 642.0
 offset_bottom = 224.0
 theme = ExtResource("10_egq4h")
+theme_override_constants/outline_size = 8
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "88.65%"
@@ -118,6 +111,7 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("10_egq4h")
+theme_override_constants/outline_size = 16
 theme_override_font_sizes/normal_font_size = 48
 theme_override_font_sizes/bold_font_size = 48
 theme_override_font_sizes/bold_italics_font_size = 48

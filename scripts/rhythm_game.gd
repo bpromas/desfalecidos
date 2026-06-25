@@ -32,7 +32,6 @@ func get_song_time():
 func handle_input(direction):
 	var arrows = arrows_by_direction[direction]
 	if arrows.is_empty():
-		print("miss (no arrows)")
 		return
 #
 	var current_time = get_song_time()
@@ -54,7 +53,6 @@ func judge(arrow, diff):
 	if diff < 0.05:
 		perfect_count+=1
 		judgement_label.text = "[rainbow][shake][wave]PERFEITO"
-		print("Perfect")
 		points += 100
 		combo += 1
 		best_combo = max(combo, best_combo)
@@ -62,7 +60,6 @@ func judge(arrow, diff):
 	elif diff < 0.1:
 		great_count+=1
 		judgement_label.text = "[color=lightgreen][shake][wave]ÓTIMO"
-		print("Great")
 		points += 50
 		combo += 1
 		best_combo = max(combo, best_combo)
@@ -70,20 +67,18 @@ func judge(arrow, diff):
 	elif diff < 0.25:
 		good_count+=1
 		judgement_label.text = "[color=dodgerblue][shake]BOM"
-		print("Good")
 		points += 25
+		combo += 1
 		arrow.hit()
 	else:
 		break_combo()
-		print("miss")
 	
 	total_count += 1
 	accuracy = ((perfect_count * 100.0) + (great_count * 85.0) + (good_count * 50)) / total_count
-	print(accuracy)
 	score += points * combo
 	combo_label.text = "x%s" % combo
 	accuracy_label.text = "%.2f%%" % accuracy
-	if score >= 500000:
+	if score >= 250000:
 		score_label.text = "[rainbow]%s" % score
 	else:
 		score_label.text = "%s" % score
@@ -105,13 +100,13 @@ func _process(delta):
 	pass
 
 func _input(event):
-	if event.is_action_pressed("ui_up"):
+	if event.is_action_pressed("up"):
 		handle_input("up")
-	elif event.is_action_pressed("ui_down"):
+	elif event.is_action_pressed("down"):
 		handle_input("down")
-	elif event.is_action_pressed("ui_left"):
+	elif event.is_action_pressed("left"):
 		handle_input("left")
-	elif event.is_action_pressed("ui_right"):
+	elif event.is_action_pressed("right"):
 		handle_input("right")
 
 
@@ -123,7 +118,6 @@ func _on_audio_stream_player_finished() -> void:
 	GlobalVariables.previous_great_count = great_count
 	GlobalVariables.previous_perfect_count = perfect_count
 	GlobalVariables.previous_accuracy = accuracy
-	#get_tree().change_scene_to_file("res://scenes/cutscene_depois_do_teste.tscn")
 	get_tree().change_scene_to_file("res://scenes/result_screen.tscn")
 
 

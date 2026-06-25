@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://jl8ysh6juw3"]
 
+[ext_resource type="Texture2D" uid="uid://bo4kd8l3asoa8" path="res://assets/athithan-vignakaran-ySNj3M5pnOQ-unsplash.jpg" id="1_he1sj"]
 [ext_resource type="Theme" uid="uid://cufhphhk28env" path="res://assets/new_rocker.tres" id="1_tx5wa"]
+[ext_resource type="Texture2D" uid="uid://btejskskiwxje" path="res://assets/lokichibi.png" id="2_hm208"]
 [ext_resource type="Script" uid="uid://bweohuy7jl1ng" path="res://scripts/menu.gd" id="2_o7i0r"]
+[ext_resource type="Texture2D" uid="uid://7gimdgn4otwx" path="res://assets/miuchibi.png" id="3_5pab1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hm208"]
 
 [node name="StartScreen" type="Control" unique_id=384893329]
 layout_mode = 3
@@ -11,7 +16,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1847781187]
+position = Vector2(452, 318)
+scale = Vector2(0.7487266, 0.7487266)
+texture = ExtResource("1_he1sj")
+
+[node name="Loki" type="Sprite2D" parent="Background" unique_id=911883642]
+position = Vector2(404.687, 69.45123)
+scale = Vector2(0.3194763, 0.3194763)
+texture = ExtResource("2_hm208")
+
+[node name="Miu" type="Sprite2D" parent="Background" unique_id=732896312]
+position = Vector2(-136.23132, 169.62132)
+scale = Vector2(0.33286494, 0.33286494)
+texture = ExtResource("3_5pab1")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=607662860]
+visible = false
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 653.0
@@ -25,6 +46,11 @@ offset_right = 687.0
 offset_bottom = 181.0
 theme = ExtResource("1_tx5wa")
 theme_override_colors/font_color = Color(0, 0.66, 0.15400001, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 32
 text = "Matatabi"
 
 [node name="Menu" type="Panel" parent="." unique_id=433128971]
@@ -34,6 +60,7 @@ offset_top = 279.0
 offset_right = 715.0
 offset_bottom = 479.0
 theme = ExtResource("1_tx5wa")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hm208")
 script = ExtResource("2_o7i0r")
 
 [node name="StartGame" type="Button" parent="Menu" unique_id=1382196164]
@@ -45,6 +72,7 @@ offset_left = -4.0
 offset_right = 4.0
 offset_bottom = 8.0
 grow_horizontal = 2
+theme_override_constants/outline_size = 16
 text = "Iniciar"
 
 [node name="Exit" type="Button" parent="Menu" unique_id=1508844087]
@@ -59,6 +87,7 @@ offset_top = -8.0
 offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/outline_size = 16
 text = "Sair"
 
 [connection signal="pressed" from="Menu/StartGame" to="Menu" method="_on_start_game_pressed"]

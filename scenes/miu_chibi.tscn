@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bng77ktrsuqac"]
 
-[ext_resource type="Script" uid="uid://cm5otog1tcyvu" path="res://SCRIPTS/miu_chibi.gd" id="1_05dmb"]
+[ext_resource type="Script" uid="uid://cm5otog1tcyvu" path="res://scripts/miu_chibi.gd" id="1_05dmb"]
 [ext_resource type="Texture2D" uid="uid://7gimdgn4otwx" path="res://assets/miuchibi.png" id="1_o8bus"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_05dmb"]
@@ -14,9 +14,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_05dmb"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.43370166, 0.53038675, 1)
+colors = PackedColorArray(1, 0.931, 0.31, 1, 1, 0.92941177, 0.30980393, 1, 1.0030304, 1.0095241, 1, -0.013799074, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_snpxl"]
+gradient = SubResource("Gradient_05dmb")
+width = 8
+height = 8
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="MiuChibi" type="Node2D" unique_id=1139898852]
 script = ExtResource("1_05dmb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1407047589]
 sprite_frames = SubResource("SpriteFrames_05dmb")
 animation = &"playing"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=86199478]
+position = Vector2(0, 677)
+amount = 16
+texture = SubResource("GradientTexture2D_snpxl")
+emission_shape = 3
+emission_rect_extents = Vector2(400, 1)
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 500.0
+initial_velocity_max = 1000.0

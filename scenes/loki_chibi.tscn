@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d0iiq66fm2lsj"]
+
+[ext_resource type="Script" uid="uid://cm5otog1tcyvu" path="res://scripts/miu_chibi.gd" id="1_2sn3d"]
+[ext_resource type="Texture2D" uid="uid://btejskskiwxje" path="res://assets/lokichibi.png" id="1_sjrgu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2sn3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sjrgu")
+}],
+"loop": true,
+"name": &"playing",
+"speed": 5.0
+}]
+
+[node name="LokiChibi" type="Node2D" unique_id=1100580221]
+script = ExtResource("1_2sn3d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1341003818]
+sprite_frames = SubResource("SpriteFrames_2sn3d")
+animation = &"playing"

@@ -1,6 +1,9 @@
 [background arg="res://assets/Miu na fila no beco.png" fade="0.0"]
-if {GlobalVariables.previous_score} >= 500000:
-	Laranjo: Interessante. Aguarde a nossa ligação.
+if {GlobalVariables.previous_score} >= 250000:
+	Laranjo: Interessante...
+	Luna: Promissor.
+	Loki: ...
+	Laranjo: Aguarde a nossa ligação.
 	Miu: Tá bem...
 else:
 	Laranjo: Você me lembra o nosso antigo baixista quando eu o conheci.

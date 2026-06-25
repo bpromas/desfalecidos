@@ -46,7 +46,6 @@ func _process(delta):
 			break
 			
 func _on_arrow_missed() -> void:
-	print("missed!")
 	game.break_combo()
 
 func _on_audio_stream_player_finished() -> void:

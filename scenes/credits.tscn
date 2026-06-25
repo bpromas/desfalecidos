@@ -22,7 +22,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -467.0
-offset_right = 357.0
+offset_right = 189.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -39,8 +39,8 @@ offset_bottom = 50.5
 grow_vertical = 2
 text = "Roteiro e Direção Criativa
 Programação e Game Design
-Arte e Design
-Arte e Design"
+Art Design e Animação
+Art Design e Animação"
 horizontal_alignment = 2
 
 [node name="Nomes" type="Label" parent="Control" unique_id=1865379305]
@@ -55,8 +55,8 @@ offset_top = -50.5
 offset_bottom = 50.5
 grow_horizontal = 0
 grow_vertical = 2
-text = "Bruna Souza
-Bruno Romaszkiewicz
+text = "Bruna
+Bruno
 Lais
 Sammy"
 
@@ -65,10 +65,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -267.0
-offset_top = 89.0
-offset_right = 267.0
-offset_bottom = 169.0
+offset_left = -467.0
+offset_top = 91.0
+offset_right = 67.0
+offset_bottom = 171.0
 grow_horizontal = 2
 theme = ExtResource("1_2ckv8")
 text = "Obrigado por jogar!"
